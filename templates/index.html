@@ -13,15 +13,17 @@
 </head>
 
 <body>
+<h1>Machine Learning Mini-Project</h1>
  <div class="login">
 	<h1>Furniture Sales Forecasting</h1>
 
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="date" placeholder="Date in YYYY-MM-01" required="required" />
-
+	
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
+	<a href="{{ url_for('static', filename='graph.png') }}" target="blank">Click here to view the graph</a>
    <br>
    <br>
    {{ date }}
